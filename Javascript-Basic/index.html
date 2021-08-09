@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Practicing</title>
+</head>
+
+<body>
+    <!-- JavaScript Can Change HTML Content -->
+    <h3>Changing HTML Content</h3>
+    <p id="demo">Hi,I am Prama :)</p>
+    <button type="button" onclick='document.getElementById("demo").innerHTML = "You are Good!"'>Click Me!</button>
+
+    <!-- JavaScript can change HTML attribute values -->
+    <h3>Changing HTML attribute</h3>
+    <button onclick="document.getElementById('myimg').src='img/dancing.gif'">Dance</button>
+    <img id="myimg" src="img/danceoff.png" style="width:100px">
+    <button onclick="document.getElementById('myimg').src='img/danceoff.png'">Stop Dancing</button>
+
+    <!-- JavaScript can change the style of an HTML element. -->
+    <h3>Changing HTML Style</h3>
+    <p id="elmnt">Don't Bother Me....</p>
+    <button type="button" onclick="document.getElementById('elmnt').style.fontSize='35px'">Click Me!</button>
+
+    <!-- JavaScript can hide HTML elements. -->
+    <h3>Hide HTML Element</h3>
+    <p id="hide">Mohsin is a chesra guy</p>
+    <button type="button" onclick="document.getElementById('hide').style.display='none'">Click Me!</button>
+
+    <!-- JavaScript can show hidden HTML elements -->
+    <h3>Show Hidden Element</h3>
+    <p id="she" style="display:none">Hello World!</p>
+    <button type="button" onclick="document.getElementById('she').style.display='block'">Click Me!</button>
+
+    <h1>Using script tag</h1>
+    <!-- Script Tag -->
+    <p id="para">I am Prama.</p>
+    <button type="button" onclick="func()">Try it</button>
+
+    <!-- Function  -->
+    <h3>Function</h3>
+    <p>The multiplication is:</p>
+    <p id="mul"></p>
+
+    <!-- Event Listener -->
+    <h3>JavaScript addEventListener()</h3>
+    <button id="myBtn">Try it</button>
+    <p id="abc"></p>
+
+    <script>
+        function func() {
+            document.getElementById("para").innerHTML = "Who are you?";
+        }
+    </script>
+
+    <script>
+        // Function 
+        function myFunction(p1, p2) {
+            return p1 * p2;
+    }
+        document.getElementById("mul").innerHTML = myFunction(4, 3);
+    </script>
+
+    <!-- Event Listener  -->
+    <script>
+        function myfirstFunction() {
+        document.getElementById("abc").innerHTML += "Moused over!<br>";
+    }
+        function mySecondFunction() {
+        document.getElementById("abc").innerHTML += "Clicked!<br>";
+    }
+        function myThirdFunction() {
+        document.getElementById("abc").innerHTML += "Moused out!<br>";
+    }
+        var x = document.getElementById("myBtn");
+        x.addEventListener("mouseover", myfirstFunction);
+        x.addEventListener("click", mySecondFunction);
+        x.addEventListener("mouseout", myThirdFunction);
+    </script>
+    </script>
+
+</body>
+
+</html>
